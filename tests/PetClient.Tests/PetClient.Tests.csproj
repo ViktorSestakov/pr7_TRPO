@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../Infrastructure/*.cs" Link="Infrastructure/%(Filename)%(Extension)" />
+    <Compile Include="../../Models/*.cs" Link="Models/%(Filename)%(Extension)" />
+    <Compile Include="../../ViewModels/*.cs" Link="ViewModels/%(Filename)%(Extension)" />
+    <Compile Include="../../Services/*.cs" Exclude="../../Services/MessageBoxDialogService.cs" Link="Services/%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>
